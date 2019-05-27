@@ -13,8 +13,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }   // Main Method
+
+    
+    
+    @IBAction func signUpButton(_ sender: UIButton) {
+        
+        print("You Click SignUp")
+        
+        performSegue(withIdentifier: "GoRegister", sender:  self)
+        
     }
+    
+    
+    
 
-
-}
+}   // Main Class
 
