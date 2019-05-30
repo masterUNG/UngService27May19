@@ -10,6 +10,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--MyService-->
+        <scene sceneID="Wr0-Gd-Yqm">
+            <objects>
+                <viewController title="MyService" id="pav-WP-Vhf" customClass="MyServiceViewController" customModule="UngService27May19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u4P-0R-jyd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3Z-Yn-T6e">
+                                <rect key="frame" x="87.666666666666686" y="287" width="200" height="150"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="B7e-e1-X77"/>
+                                    <constraint firstAttribute="width" constant="200" id="pop-Se-PL2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="pav-WP-Vhf" eventType="touchUpInside" id="iyj-LK-RyP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt0-yR-0hq">
+                                <rect key="frame" x="87.666666666666686" y="445" width="200" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="MTN-r7-0aL"/>
+                                    <constraint firstAttribute="width" constant="200" id="dop-OQ-TCF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButton:" destination="pav-WP-Vhf" eventType="touchUpInside" id="HpY-EA-HDD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tt0-yR-0hq" firstAttribute="centerX" secondItem="u4P-0R-jyd" secondAttribute="centerX" id="BjG-GP-ktJ"/>
+                            <constraint firstItem="X3Z-Yn-T6e" firstAttribute="centerY" secondItem="u4P-0R-jyd" secondAttribute="centerY" constant="-44" id="Qfl-58-qEp"/>
+                            <constraint firstItem="X3Z-Yn-T6e" firstAttribute="centerX" secondItem="u4P-0R-jyd" secondAttribute="centerX" id="VBb-pY-Xpn"/>
+                            <constraint firstItem="Tt0-yR-0hq" firstAttribute="top" secondItem="X3Z-Yn-T6e" secondAttribute="bottom" constant="8" id="xyi-nn-W3C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kqa-ru-Zqt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HiV-dO-toP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1012" y="23"/>
+        </scene>
         <!--Authen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -63,6 +114,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvp-zs-Ue0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL3-2u-HfJ">
                                 <rect key="frame" x="190" y="375" width="95" height="30"/>
@@ -97,7 +151,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTextField" destination="7Ig-PG-ZNE" id="Vg4-Dl-CZi"/>
+                        <outlet property="userTextField" destination="dkB-Hp-5Fs" id="LC3-Dh-dsF"/>
                         <segue destination="CI1-XY-QI1" kind="show" identifier="GoRegister" id="dYZ-xC-Hc2"/>
+                        <segue destination="pav-WP-Vhf" kind="show" identifier="GoMyService" id="LuD-Vx-gFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
